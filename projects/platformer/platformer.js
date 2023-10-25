@@ -56,8 +56,9 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-     createCollectable("max", 430, 100, 0.5, 1)
-
+     createCollectable("max", 430, 60, 0.5, 1)
+     createCollectable("max", 1330, 200, 0.5, 1)
+     createCollectable("max", 780, 200, 0, 0)
 
 
     // TODO 3
@@ -66,8 +67,8 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
      createCannon("bottom", 692, 1000)
-     createCannon("bottom", 792, 1000)
-     createCannon("right", 1000, 1000, 50,)
+     createCannon("bottom", 792, 1000) 
+     createCannon("top", 1210, 1000)
 
 
     /////////////////////////////////////////////////

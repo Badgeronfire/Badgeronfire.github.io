@@ -62,10 +62,17 @@ repeat: 3
   
 
   // TODO 4-a: add a function that handles the good display type
-  
+  function handlegood(color, shape, repeat){
+    setBackgroundWithSimple(color, shape, repeat);
+    animationDetails.displayType = 2;
+  }
 
   // TODO 5-a: add a function that handles the bad display type
-  
+  function handlebad(data, repeat) {
+    repeat += 1
+    setBackgroundWithMixed(data, repeat)
+    animationdetails.displayType = 3
+  }
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
@@ -73,7 +80,7 @@ repeat: 3
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handleGood(currentShape.color, currentShape.shape, currentShape.repeat)
+    handlestatic(datashapes[currentIndex])
   }
 
   function goodDisplay() {
@@ -84,7 +91,9 @@ repeat: 3
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-    
+    var currentShape= dataShapes[currentIndex];
+    var repeat = currentshape.repeat
+    handlebad(currentshape, repeat)
   }
 
   /////////////////////////////////////////////////

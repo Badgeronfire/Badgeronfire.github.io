@@ -71,10 +71,10 @@ repeat: 3
   }
 
   // TODO 5-a: add a function that handles the bad display type
-  function handlebad(data, repeat) {
+  function handleBad(data, repeat) {
     repeat += 1;
     setBackgroundWithMixed(data, repeat);
-    animationdetails.displayType = 3;
+    animationDetails.displayType = 3;
   }
 
   /////////////////////////////////////////////////
@@ -83,20 +83,20 @@ repeat: 3
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handlestatic(datashapes[currentIndex]);
+    handleStatic(dataShapes[currentIndex]);
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
     var currentShape = dataShapes[currentIndex];
-    handleGood(currentShape.color, currentShape.shape, currentShape. repeat);
+    handleGood(currentShape.color, currentShape.shape, currentShape.repeat);
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
     var currentShape= dataShapes[currentIndex];
-    var repeat = currentshape.repeat;
-    handleBad(currentshape, repeat);
+    var repeat = currentShape.repeat;
+    handleBad(currentShape, repeat);
   }
 
   /////////////////////////////////////////////////

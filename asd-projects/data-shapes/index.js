@@ -42,7 +42,7 @@ $(document).ready(function () {
 color: 'blue',
 shape: 'circle',
 repeat: 3
-  }
+  };
 
   // TODO 2: add a new property to all data shapes
   for (i = 0; i < dataShapes.length; i++) {
@@ -59,19 +59,22 @@ repeat: 3
   }
 
   // TODO 3-a: add a function that handles the static display type
-  
+  function handleStatic(data) {
+     setBackgroundWithObject(data);
+     animationDetails.displayType = 1; 
+    }
 
   // TODO 4-a: add a function that handles the good display type
-  function handlegood(color, shape, repeat){
+  function handleGood(color, shape, repeat) {
     setBackgroundWithSimple(color, shape, repeat);
     animationDetails.displayType = 2;
   }
 
   // TODO 5-a: add a function that handles the bad display type
   function handlebad(data, repeat) {
-    repeat += 1
-    setBackgroundWithMixed(data, repeat)
-    animationdetails.displayType = 3
+    repeat += 1;
+    setBackgroundWithMixed(data, repeat);
+    animationdetails.displayType = 3;
   }
 
   /////////////////////////////////////////////////
@@ -80,20 +83,20 @@ repeat: 3
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handlestatic(datashapes[currentIndex])
+    handlestatic(datashapes[currentIndex]);
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
     var currentShape = dataShapes[currentIndex];
-    handleGood(currentShape.color, currentShape.shape, currentShape. repeat)
+    handleGood(currentShape.color, currentShape.shape, currentShape. repeat);
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
     var currentShape= dataShapes[currentIndex];
-    var repeat = currentshape.repeat
-    handlebad(currentshape, repeat)
+    var repeat = currentshape.repeat;
+    handleBad(currentshape, repeat);
   }
 
   /////////////////////////////////////////////////

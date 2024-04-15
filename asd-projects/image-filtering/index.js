@@ -88,7 +88,7 @@ function keepInBounds(boundNum) {
 
 // TODO 3: Create reddify function
 function reddify(rgbArray) {
-  rgbArray[RED] = 200;
+  rgbArray[GREEN] = 0;
 }
 
 
